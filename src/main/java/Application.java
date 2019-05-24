@@ -1,3 +1,4 @@
+import config.AnnotationConfig;
 import config.BeanConfig;
 import factory.RunnableFactoryBean;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -9,12 +10,17 @@ import pojo.*;
  * @Date: Create in 9:23 2019/5/23
  */
 
-public class application {
+public class Application {
     public static void main(String[] args) {
         System.out.println("hello world");
         //基于注解
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeanConfig.class,
                 City.class, CityDAO.class, CityService.class,CityController.class);
+//        //扫描packages
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("pojo","config");
+//        //在配置类中扫描bean
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AnnotationConfig.class);
+
         //获取bean方式-根据类型获取
         System.out.println(context.getBean(User.class));
         //获取bean方式-根据名字获取

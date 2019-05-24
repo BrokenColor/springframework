@@ -8,19 +8,14 @@ import javax.inject.Inject;
 
 /**
  * @Author: GWL
- * @Description: 组件 装配bean
- * @Date: Create in 12:59 2019/5/23
- * 无法重写初始化销毁方法
- * @Autowired 是spring自带的，
- * @Inject 是JSR330规范实现的，
- * @Resource 是JSR250规范实现的，需要导入不同的包
+ * @Description: 注解依赖注入
+ * @Date: Create in 14:44 2019/5/24
  */
-@Component("MyCity")
-public class City {
-
+@Component("MyCountry")
+public class Country {
     //spring 的注入方式
     @Autowired
-    private CityService cityService;
+    private Jeep jeep;
 
     //JSR250规范实现的
     @Resource
@@ -32,6 +27,6 @@ public class City {
 
     @Override
     public String toString() {
-        return "City:[CityService = " + cityService + ",cat= "+ cat+",car= "+ car+"]";
+        return "Country:[Jeep = " + jeep + ",cat= "+ cat+",car= "+ car+"]";
     }
 }
