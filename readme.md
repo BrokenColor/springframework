@@ -1,27 +1,29 @@
 # SpringFramework learnning
-* 基于注解的bean的装配测试
-    * 根据类型获取获取bean
-    * 根据名字获取获取bean
-    * FactoryBean 通过类型获取bean
-    * FactoryBean 通过名字获取bean
-    * 通过类型获取FactoryBean本身
-    * 通过名字获取FactoryBean本身
-    * 重写bean初始化和销毁方法三种方式
-    * 通过@Component 装配bean
-    * 通过@Repository 装配bean
-    * 通过@Service 装配bean
-    * 通过@Controller 装配bean
-* 依赖注入测试
-    * 注解依赖注入
-    * 接口依赖注入
-    * 构造函数依赖注入
+    * 基于注解的bean的装配测试
+        * 根据类型获取获取bean
+        * 根据名字获取获取bean
+        * FactoryBean 通过类型获取bean
+        * FactoryBean 通过名字获取bean
+        * 通过类型获取FactoryBean本身
+        * 通过名字获取FactoryBean本身
+        * 重写bean初始化和销毁方法三种方式
+        * 通过@Component 装配bean
+        * 通过@Repository 装配bean
+        * 通过@Service 装配bean
+        * 通过@Controller 装配bean
+    * 依赖注入测试
+        * 注解依赖注入
+        * 接口依赖注入
+        * 构造函数依赖注入
 
 ## Spring 中的 bean 的作用域
     * singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。
 	* prototype : 每次请求都会创建一个新的 bean 实例。
 	* request : 每一次HTTP请求都会产生一个新的bean，该bean仅在当前HTTP request内有效。
 	* session : 每一次HTTP请求都会产生一个新的 bean，该bean仅在当前 HTTP session 内有效。
-	* global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。但是，与 servlet 不同，每个 portlet 都有不同的会话    
+	* global-session： 全局session作用域，仅仅在基于portlet的web应用中才有意义，Spring5已经没有了。<br/>
+	Portlet是能够生成语义代码(例如：HTML)片段的小型Java Web插件。它们基于portlet容器，可以像servlet一样处理HTTP请求。<br/>
+	但是，与 servlet 不同，每个 portlet 都有不同的会话    
 ## bean生命周期
 	* Bean 容器找到配置文件中 Spring Bean 的定义。
 	* Bean 容器利用 Java Reflection API 创建一个Bean的实例。
