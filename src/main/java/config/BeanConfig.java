@@ -62,6 +62,11 @@ public class BeanConfig {
         return new Dog();
     }
 
+    @Bean(initMethod = "initCustom", destroyMethod = "destroyCustom")
+    public Bird createBird(){
+        return new Bird();
+    }
+
     @Bean
     public Animal createAnimal(){
         return new Animal();

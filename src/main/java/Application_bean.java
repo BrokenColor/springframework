@@ -44,6 +44,8 @@ public class Application_bean {
         System.out.println(context.getBean(Dog.class));
         //在bean创建和销毁时处理需求 方式二
         System.out.println(context.getBean(Animal.class));
+        //对比三种bean创建和销毁时机
+        System.out.println(context.getBean(Bird.class));
 
         //通过@Component 装配bean
         System.out.println(context.getBean(City.class));
