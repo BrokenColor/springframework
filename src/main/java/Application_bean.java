@@ -10,7 +10,7 @@ import pojo.*;
  * @Date: Create in 9:23 2019/5/23
  */
 
-public class Application {
+public class Application_bean {
     public static void main(String[] args) {
         System.out.println("hello world");
         //基于注解

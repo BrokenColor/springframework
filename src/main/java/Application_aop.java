@@ -1,5 +1,5 @@
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import pojo.Car;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import pojo.Country;
 import pojo.County;
 import pojo.Province;
@@ -10,7 +10,8 @@ import pojo.Province;
  * @Date: Create in 13:05 2019/5/24
  * packages
  */
-public class Application_1 {
+@EnableAspectJAutoProxy//启用自动代理功能
+public class Application_aop {
 
     public static void main(String[] args) {
         //扫描packages
